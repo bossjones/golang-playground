@@ -49,3 +49,8 @@ tidy:
 # install cobra cli
 cobra-cli-install:
     go install github.com/spf13/cobra-cli@latest
+
+# setup cli dir structure
+cobra-setup:
+    cd cmd
+    cobra-cli init . --author "bossjones" --viper
