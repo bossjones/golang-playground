@@ -54,3 +54,7 @@ cobra-cli-install:
 cobra-setup:
     cd cmd
     cobra-cli init . --author "bossjones" --viper
+    cobra-cli add serve
+    cobra-cli add config
+    cobra-cli add prepare
+    cobra-cli add create -p 'configCmd'
