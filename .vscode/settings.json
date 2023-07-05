@@ -1,0 +1,87 @@
+{
+    "go.testFlags": [
+        "-failfast",
+        "-v"
+    ],
+    "go.inlayHints.compositeLiteralFields": true,
+    "go.inlayHints.constantValues": true,
+    "go.lintFlags": [
+        "--fast"
+    ],
+    "go.lintTool": "golangci-lint",
+    "go.toolsManagement.autoUpdate": true,
+    "go.enableCodeLens": {
+        "runtest": false
+    },
+    "gopls": {
+        // SOURCE: https://github.com/FollowTheProcess/dotfiles/blob/fcf3daf7701b5d027c6cceb60b3b691bc1ac9537/settings.json#L178
+        // SOURCE: https://github.com/yanmhlv/.dotfiles/blob/ea2eb398d7c5c0f0e4eea1fe65d90d910efbfcc0/config/vscode-settings.json#L210
+        // "ui.codelenses": {
+        //     "gc_details": true,
+        //     "generate": true
+        // },
+        // "ui.diagnostic.analyses": {
+        //     "fieldalignment": true,
+        //     "nilness": true,
+        //     "unusedvariable": true,
+        //     "unusedwrite": true,
+        //     "useany": true,
+        //     "unusedparams": true
+        // },
+        "analyses": {
+            "fieldalignment": true,
+            "nilness": true,
+            "shadow": true,
+            "staticcheck": true,
+            "unused_write": true,
+            "unusedparams": false
+        },
+        "ui.semanticTokens": true,
+        "ui.completion.usePlaceholders": true,
+        "ui.codelenses": {
+            "gc_details": false,
+            "regenerate_cgo": false,
+            "generate": false,
+            "test": false,
+            "tidy": false,
+            "upgrade_dependency": false,
+            "vendor": false
+        }
+    },
+    "go.lintOnSave": "file",
+    // "go.buildOnSave": "off",
+    "go.vetOnSave": "off",
+    // "go.lintTool": "golint",
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "[go]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "golang.go",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+        }
+    },
+    "shellformat.effectLanguages": [
+        "shellscript",
+        "hosts",
+        "jvmoptions",
+        "spring-boot-properties",
+        "azcli"
+    ],
+    "go.docsTool": "godoc",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[shellscript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true
+        },
+        "editor.defaultFormatter": "foxundermoon.shell-format",
+        "files.eol": "auto"
+    },
+}

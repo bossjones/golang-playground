@@ -40,10 +40,12 @@ install:
 
 # vendor go deps
 vendor:
+    # The go mod vendor command constructs a directory named vendor in the main module's root directory that contains copies of all packages needed to support builds and tests of packages in the main module. Packages that are only imported by tests of packages outside the main module are not included. As with go mod tidy and other module commands, build constraints except for ignore are not considered when constructing the vendor directory.
     go mod vendor
 
 # run go mod tidy
 tidy:
+    # go mod tidy ensures that the go.mod file matches the source code in the module. It adds any missing module requirements necessary to build the current module's packages and dependencies, and it removes requirements on modules that don't provide any relevant packages. It also adds any missing entries to go.sum and removes unnecessary entries.
     go mod tidy
 
 # install cobra cli
